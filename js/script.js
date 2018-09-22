@@ -31,6 +31,11 @@ var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
 
 drawnItems = L.featureGroup().addTo(map);
 
+var osm2 = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png', {minZoom: 1, maxZoom: 13, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>' });
+var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true, position : 'bottomleft' }).addTo(map);
+
+var scaleBar = L.control.scale({position : 'bottomright'}).addTo(map);
+
 var baseLayers = {
 	"Positron": positron
 };
@@ -80,3 +85,23 @@ map.addControl(new L.Control.Draw({
             }
         }
     }));
+
+var layers = ["Layer1","Layer2","Layer3"];
+
+$(document).ready(function (){
+
+let select = $('#layerDD')
+    .attr("id", "bar-list")
+    .attr("class", "selecteur")
+    .attr("class", "selectpicker")
+    .attr("data-live-search", "true")
+    .attr("title", "Choisissez une couche")
+
+
+  for (var i = 0; i < layers.length; i++) {
+    select.append('<option id="' + i + '">' + layers[i] + '</option>');
+  }
+
+  select.selectpicker('refresh');
+}
+)

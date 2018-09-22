@@ -11,6 +11,10 @@
 
     <link rel="stylesheet" href="/css/leaflet-sidebar.css" />
     <link rel="stylesheet" href="/css/Control.Opacity.css" />
+    <link rel="stylesheet" href="/css/Control.MiniMap.css" />
+    <link rel="stylesheet" href="/src/leaflet.draw.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/bootstrap-select.css" />
 
     <style>
         body {
@@ -98,15 +102,10 @@
                     <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
                 </h1>
 
-                <p>A responsive sidebar for mapping libraries like <a href="http://leafletjs.com/">Leaflet</a> or <a href="http://openlayers.org/">OpenLayers</a>.</p>
-
-                <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-                <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-                <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-                <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <div id="selectControl" class="select-layer">
+                    <select id = "layerDD">
+                    </select>
+                </div>
             </div>
 
             <div class="sidebar-pane" id="profile">
@@ -133,7 +132,6 @@
     <script src="/js/Control.Opacity.js"></script>
     <script src="/src/Leaflet.draw.js"></script>
     <script src="/src/Leaflet.Draw.Event.js"></script>
-    <link rel="stylesheet" href="/src/leaflet.draw.css"/>
 
     <script src="/src/Toolbar.js"></script>
     <script src="/src/Tooltip.js"></script>
@@ -168,6 +166,10 @@
     <script src="/src/edit/handler/Edit.Marker.js"></script>
     <script src="/src/edit/handler/Edit.CircleMarker.js"></script>
     <script src="/src/edit/handler/Edit.Circle.js"></script>
+    <script src="/js/Control.MiniMap.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap-select.js"></script>
+
     <script src = "/js/script.js"></script>
 </body>
 </html>
